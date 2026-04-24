@@ -12,28 +12,30 @@ Everything speaks JSON. I made sure it catches bad requests cleanly without dump
 
 ---
 
-## Getting Started
+## Build & Run Instruction
 
-**Prerequisites:** 
-- Java 11 or higher
-- Maven
-- Apache Tomcat (I am using Tomcat 9)
+**Prerequisites**
+- Java JDK 11 or higher installed
+- Apache Maven 3.6+ installed and added to PATH
+- Apache Tomcat 9.0 extracted (e.g. to C:\Tomcat\apache-tomcat-9.0.100)
 
-**1. Build the project:**
+**Step 1: Clone the Repository**
 ```bash
-mvn clean package
+git clone https://github.com/NamithaDanupama/Smart-Campus-API.git
 ```
 
-**2. Deploy:**
-Drop the built `smart-campus-api-1.0-SNAPSHOT.war` from the `target` folder into your Tomcat `webapps` directory.
+**Step 2 — Build the Project**
+Open the project in NetBeans, then:
+- Right click the project → Clean and Build
+- Wait for BUILD SUCCESS in the output window
 
-**3. Run Tomcat:**
-```bash
-C:\apache-tomcat-9.0.X\bin\startup.bat
-```
+**Step 3 — Copy the WAR file to Tomcat**
+Go to your project folder → open target folder → copy `smart-campus-w2121365-1.0-SNAPSHOT.war` → paste it into `C:\apache-tomcat-9.0.100\webapps\`
 
-**4. Check it's live:**
-Open http://localhost:8080/smart-campus-api-1.0-SNAPSHOT/api/v1/ in your browser.
+**Step 4 — Start Tomcat**
+In NetBeans:
+- Right click the project → Run
+- NetBeans will start Tomcat and deploy automatically
 
 ---
 
